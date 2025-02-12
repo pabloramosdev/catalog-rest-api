@@ -9,12 +9,12 @@ import java.time.LocalDateTime;
 @Data
 @Builder
 public class Price {
-    private Brand brand;
+    private Integer brandId;
     private Integer productId;
     private Short rateType;
     private Short priority;
     private LocalDateTime startDate;
     private LocalDateTime endDate;
     private BigDecimal amount;
-    private Currency currency;
+    private String currency;
 }
