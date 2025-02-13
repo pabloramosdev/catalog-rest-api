@@ -18,6 +18,11 @@ spring:
     properties:
       hibernate:
         format_sql: true
+  jackson:
+    date-format: yyyy-MM-dd hh:mm:ss
+  mvc:
+    format:
+      date-time: yyyy-MM-dd HH:mm:ss
 
 logging:
   level:
