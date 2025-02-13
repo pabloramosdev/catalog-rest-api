@@ -1,4 +1,4 @@
-package com.catalog.domain;
+package com.catalog.infrastructure.rest.model;
 
 import lombok.Builder;
 import lombok.Data;
@@ -8,13 +8,12 @@ import java.time.LocalDateTime;
 
 @Data
 @Builder
-public class Price {
+public class PriceResponse {
     private Integer brandId;
     private Integer productId;
-    private Short rateType;
-    private Short priority;
+    private Short rateApplied;
     private LocalDateTime startDate;
     private LocalDateTime endDate;
-    private BigDecimal amount;
+    private BigDecimal price;
     private String currency;
 }
