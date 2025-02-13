@@ -6,8 +6,6 @@ spring:
     url: jdbc:h2:mem:ecommerce
     username: test
     password: test
-  flyway:
-    enabled: false
   h2:
     console:
       enabled: true
