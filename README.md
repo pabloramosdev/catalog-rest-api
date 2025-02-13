@@ -24,7 +24,7 @@ to search prices of products
 4. Once the app starts open a browser and write:
 
 ```text
-	http://localhost:8080/swagger-ui.html
+	http://localhost:8080/swagger-ui/index.html
 ```
 
 ## Technologies used
