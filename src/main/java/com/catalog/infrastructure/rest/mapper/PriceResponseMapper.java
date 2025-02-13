@@ -7,7 +7,7 @@ public class PriceResponseMapper {
 
     public static PriceResponse toPriceResponse(Price price) {
         return PriceResponse.builder()
-                .brandId(price.getProductId())
+                .brandId(price.getBrandId())
                 .productId(price.getProductId())
                 .rateApplied(price.getRateType())
                 .startDate(price.getStartDate())

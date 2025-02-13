@@ -1,7 +1,7 @@
 package com.catalog.application;
 
 import com.catalog.domain.Price;
-import com.catalog.domain.exception.ProductNotFoundException;
+import com.catalog.domain.exception.PriceNotFoundException;
 import com.catalog.domain.repository.PriceRepository;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -103,9 +103,9 @@ class SearchBestPriceAtDateTest {
     @Test
     void shouldThrowProductNotFoundException_whenSearchNonExistingProduct() {
         when(priceRepository.findPriceByBrandAndProductIdAndDate(any(), anyInt(), any()))
-                .thenThrow(new ProductNotFoundException(1, 1, LocalDateTime.now()));
+                .thenThrow(new PriceNotFoundException(1, 1, LocalDateTime.now()));
 
-        ProductNotFoundException exception = assertThrows(ProductNotFoundException.class,
+        PriceNotFoundException exception = assertThrows(PriceNotFoundException.class,
                 () -> searchBestPriceAtDate.execute(1, 1, LocalDateTime.now()));
 
         assertEquals(1, exception.getBrandId());
