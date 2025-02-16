@@ -7,10 +7,10 @@ public class PriceEntityMapper {
 
     public static Price priceEntityToPrice(PriceEntity priceEntity) {
         return Price.builder()
-                .brandId(priceEntity.getBrandId())
-                .productId(priceEntity.getProductId())
-                .startDate(priceEntity.getStartDate())
-                .endDate(priceEntity.getEndDate())
+                .brandId(priceEntity.getPriceEntityId().getBrandId())
+                .productId(priceEntity.getPriceEntityId().getProductId())
+                .startDate(priceEntity.getPriceEntityId().getStartDate())
+                .endDate(priceEntity.getPriceEntityId().getEndDate())
                 .rateType(priceEntity.getRate())
                 .priority(priceEntity.getPriority())
                 .amount(priceEntity.getAmount())
