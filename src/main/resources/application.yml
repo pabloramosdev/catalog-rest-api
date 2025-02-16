@@ -3,16 +3,16 @@ spring:
     name: catalog-rest-api
   datasource:
     driver-class-name: org.h2.Driver
-    url: jdbc:h2:mem:ecommerce
+    url: jdbc:h2:mem:ecommerce;DB_CLOSE_DELAY=-1
     username: test
     password: test
   flyway:
     driver-class-name: org.h2.Driver
-    url: jdbc:h2:mem:ecommerce
+    url: jdbc:h2:mem:ecommerce;DB_CLOSE_DELAY=-1
     user: test
     password: test
     locations: classpath:db/migration
-    default-schema: ecommerce
+    #default-schema: ecommerce
   h2:
     console:
       enabled: true
@@ -23,6 +23,7 @@ spring:
     properties:
       hibernate:
         format_sql: true
+        dialect: org.hibernate.dialect.H2Dialect
   jackson:
     date-format: yyyy-MM-dd hh:mm:ss
   mvc:
