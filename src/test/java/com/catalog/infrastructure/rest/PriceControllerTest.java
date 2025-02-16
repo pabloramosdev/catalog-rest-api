@@ -133,4 +133,15 @@ class PriceControllerTest {
                         }
                         """));
     }
+
+    @Test
+    void getPricesTestNotFound() throws Exception {
+        mockMvc.perform(get("/prices")
+                        .param("brandId", "1")
+                        .param("productId", "2")
+                        .param("applicationDate", "2020-06-16T21:00:00")
+                        .contentType(MediaType.APPLICATION_JSON))
+                .andDo(print())
+                .andExpect(status().isNotFound());
+    }
 }
